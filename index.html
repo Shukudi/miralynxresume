@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shukudi Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>body, header, section, footer, .project {
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+  }</style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+          <div class="header-center">
+            <h1 style="font-size: 70px;">Miralynx</h1>
+            <button class="title-btn" style="font-size: 20px;">Full Stack Web Developer/Wordpress Expert</button>
+          </div>
+          <div class="header-right">
+            <button id="toggle-dark">🌙</button>
+          </div>
+        </div>
+      </header>
+      
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>My name is Malagu Miracle Chidinma. Am a Full stack Developer and Wordpress Expert. I develop modern, responsive websites that help businesses grow online. This is my personal portfolio and resume showcasing my work as a Web Developer specializing in WordPress, Elementor customization, and responsive design. Includes projects, achievements, and skills to highlight experience in business websites, landing pages, and e-commerce development.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>WordPress & Elementor</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>WooCommerce & E-commerce</li>
+      <li>SEO & Speed Optimization</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="./images/portfolio-pj-1-pic.png" alt="Project 1">
+        <h3>Miralynx Landing Page</h3>
+        <p>Responsive one-page site built with Elementor.</p>
+      </div>
+      <div class="project">
+        <img src="./images/portfolio-pj-pic-2.png" alt="Project 2">
+        <h3>MiracleDev Business Website</h3>
+        <p>5-page WordPress site with contact form and SEO optimization.</p>
+      </div>
+      <div class="project">
+        <img src="./images/portfolio-pj-pic-3.png" alt="Project 3">
+        <h3>E-commerce Store</h3>
+        <p>WooCommerce integration with product listings and payment gateway.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="education">
+    <h2>Education & Certifications</h2>
+  
+    
+
+     <!-- Another text-based item -->
+      <div class="certificates-grid">
+        <!-- Text-based education item -->
+    <div class="edu-item">
+        <h3>B.Sc. Computer Science</h3>
+        <p>Ahmadu Bello University, Zaria</p>
+      </div>
+        <div class="edu-item">
+        <h3>SEO Optimization Training</h3>
+        <p>Udemy</p>
+      </div>
+    </div>
+     
+  
+    <!-- Certificates grid -->
+    <div class="certificates-grid">
+      <div class="edu-item">
+        <h3>Front-end Developer Certificate</h3>
+        <img src="./images/porfolio-BE-certificate.png" alt="Front-end Certificate">
+        <p>Fhobs Solutions, Asaba</p>
+      </div>
+      <div class="edu-item">
+        <h3>Back-end Developer Certificate</h3>
+        <img src="./images/portfolio-FE-certificate.png" alt="Back-end Certificate">
+        <p>Fhobs Solutions, Asaba</p>
+      </div>
+    </div>
+  
+   
+  </section>
+  
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: hello@miracledev.com.ng</p>
+    <p>Fiverr: <a href="https://www.fiverr.com/miralynx/buying?source=avatar_menu_profile">My Fiverr Profile</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+    <p>whatsapp contact: <a href="#">+2349046035196</a> </p>
+    <p>Facebook: <a href="https://web.facebook.com/profile.php?id=61566141760112">Miralynx FB</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Shukudi | Portfolio powered by GitHub Pages</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-dark');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Save preference
+      if(document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  
+    // Load preference
+    if(localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
+<script>
+    // Intersection Observer to detect when projects enter viewport
+    const projects = document.querySelectorAll('.project');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    projects.forEach(project => {
+      observer.observe(project);
+    });
+  </script>
+  
+  
+</body>
+</html>
