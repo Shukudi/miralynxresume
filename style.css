@@ -131,6 +131,8 @@ header {
     background: #3498db;
     color: #fff;
     padding: 10px 15px;
+    margin: 10px;
+    width: fit-content;
     border-radius: 20px;
     font-size: 0.95rem;
     transition: transform 0.2s ease;
