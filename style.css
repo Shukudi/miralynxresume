@@ -124,6 +124,7 @@ header {
   /* Skills */
   #skills ul {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 15px;
     list-style: none;
