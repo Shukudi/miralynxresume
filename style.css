@@ -125,11 +125,13 @@ header {
   #skills ul {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 15px;
     list-style: none;
   }
   
   #skills li {
+    width: fit to content;
     background: #3498db;
     color: #fff;
     padding: 10px 15px;
