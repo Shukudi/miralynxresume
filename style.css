@@ -176,12 +176,12 @@ header {
   
   /* Uniform image height */
   .project img {
-    width: 100%;
-    height: 200px;       /* fixed height for uniform rows */
-    object-fit: cover;   /* crops nicely without distortion */
+    width: fit-content;
+    height: fit-content;       /* fixed height for uniform rows */
+    object-fit: contain;   /* crops nicely without distortion */
     border-radius: 8px;
     margin-bottom: 10px;
-    display: block;
+    display: inline-block;
   }
   
   /* Responsive adjustments */
